@@ -1,0 +1,1682 @@
+lore:
+  - '&7Worth: &#15e30f$%amount%'
+
+
+# ACTOINBAR or CHAT or TITLE available (You can choose multiple)
+sell-notify-mode:
+  - ACTIONBAR
+  #- TITLE
+  #- CHAT
+
+
+use-multipliers: true
+
+# restart your server everytime you change this:
+use-new-sell-menu: false
+
+sell-notify:
+  screen:
+    title: "&a+$%amount%"
+    subtitle: "&7You sold %items% items"
+    fade-in: 5
+    stay: 40
+    fade-out: 10
+
+
+
+
+# GUIs whose title contains any of these substrings will NOT get worth-lore
+no-worth-gui-names:
+  - Item Prices
+  - Sell history
+  - ᴘʟᴀᴄᴇ ɪᴛᴇᴍѕ ɪɴ ʜᴇʀᴇ ᴛᴏ ѕᴇʟʟ
+  - ᴘʀᴏɢʀᴇѕѕ
+  - ᴘʀɪᴄᴇѕ
+  - Confirm Reset
+
+# whether to show the “worth” lore items
+display-worth-lore: true
+
+
+
+sounds:
+  page-switch: ITEM_BOOK_PAGE_TURN
+  close-sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  click-sound: UI_BUTTON_CLICK
+  declined: ENTITY_VILLAGER_NO
+
+messages:
+  expired-wand: '&cYour Sell Wand has expired and been removed.'
+  empty-chest: '&7Chest is empty – nothing to sell.'
+  worth: '&#10a5eb 1 %item% &7is worth &#3bef0f$%amount%'
+  worth-invalid: '&7Unknown item: &#10a5eb%input%'
+  cannot-sell: '&#10a5ebYou cannot sell that item!'
+  worth-enabled: "&#34ee80Worth lore: &aENABLED"
+  worth-disabled: "&#34ee80Worth lore: &cDISABLED"
+
+disabled-items:
+  - BARRIER
+  - LIGHT
+  - SPAWN_EGG
+  - SPAWNER
+
+
+sell-axe:
+  use-countdown: true
+  duration-seconds: 259200 # 3 days
+
+  display-name: '&#8e0beeᴀᴍᴇᴛʜʏѕᴛ ѕᴇʟʟ ᴡᴀɴᴅ'
+  lore:
+    - '&7Instanly Sells All Items in A Chest'
+    - '&8Self Destruct:'
+    - '&8%countdown%'
+
+  enchantments:
+    - MENDING:1
+    - EFFICIENCY:5
+    - UNBREAKING:3
+
+
+
+
+category-menu:
+  rows: 6
+  title: '%item% Items'
+
+  titles:
+    CROPS: '&#444444ᴄʀᴏᴘ ᴘʀɪᴄᴇѕ'
+    BONE: '&#444444ᴍᴏʙ ᴅʀᴏᴘ ᴘʀɪᴄᴇѕ'
+    DIAMOND: '&#444444ᴏʀᴇ ᴘʀɪᴄᴇѕ'
+    OAK_LEAVES: '&#444444ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍ ᴘʀɪᴄᴇѕ'
+    NETHERITE_HELMET: '&#444444ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟ ᴘʀɪᴄᴇѕ'
+    TROPICAL_FISH: '&#444444ꜰɪѕʜ ᴘʀɪᴄᴇѕ'
+    BOOK: '&#444444ʙᴏᴏᴋ ᴘʀɪᴄᴇѕ'
+    BREWING_STAND: '&#444444ᴘᴏᴛɪᴏɴ ᴘʀɪᴄᴇѕ'
+    BRICK: '&#444444ʙʟᴏᴄᴋ ᴘʀɪᴄᴇѕ'
+
+  previous-page-slot: 48
+  previous-page:
+    material: ARROW
+    displayname: '&#34ee80ᴘʀᴇᴠɪᴏᴜѕ'
+    lore:
+      - '&fPrevious Page'
+
+  next-page-slot: 50
+  next-page:
+    material: ARROW
+    displayname: '&#34ee80ɴᴇхᴛ'
+    lore:
+      - '&fNext Page'
+
+  back-button:
+    slot: 45
+    material: RED_STAINED_GLASS_PANE
+    displayname: '&#ee300aʙᴀᴄᴋ'
+    lore:
+      - '&fClick to return'
+
+  item:
+    displayname: '&r%item%'
+    lore:
+      - '&fPrice: &#20f706$%item-value%'
+
+
+
+
+new-sell-menu:
+  loading-color: '&#34ee80'
+  complete-loading-color: '&#34ee80'
+  bar-length: 20
+  bar-symbol: '&m '
+  title: '&#444444sell multipliers'
+  rows: 3
+  actionbar-message: '&#34ee80+$%amount%'
+  chat-message: '&#34ee80+$%amount%'
+
+  items:
+    - CROPS
+    - BONE
+    - DIAMOND
+    - OAK_LEAVES
+    - NETHERITE_HELMET
+    - TROPICAL_FISH
+    - BOOK
+    - BREWING_STAND
+    - BRICK
+
+  item-settings:
+    CROPS:
+      slot: 9
+      displayname: '&#34ee80ᴄʀᴏᴘѕ'
+      material: WHEAT
+      lore:
+        - '&7Sell crops and farming materials to'
+        - '&7upgrade your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+
+    BONE:
+      slot: 10
+      displayname: '&#34ee80ᴍᴏʙ ᴅʀᴏᴘѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    DIAMOND:
+      slot: 11
+      displayname: '&#34ee80ᴏʀᴇѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    OAK_LEAVES:
+      slot: 12
+      displayname: '&#34ee80ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    NETHERITE_HELMET:
+      slot: 13
+      displayname: '&#34ee80ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    TROPICAL_FISH:
+      slot: 14
+      displayname: '&#34ee80ꜰɪѕʜ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BOOK:
+      slot: 15
+      displayname: '&#34ee80ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BREWING_STAND:
+      slot: 16
+      displayname: '&#34ee80ᴘᴏᴛɪᴏɴѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BRICK:
+      slot: 17
+      displayname: '&#34ee80ʙʟᴏᴄᴋѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+
+
+sell-menu:
+  loading-color: '&#34ee80'
+  complete-loading-color: '&#34ee80'
+  bar-length: 20
+  bar-symbol: '&m '
+  title: '&#444444ᴘʟᴀᴄᴇ ɪᴛᴇᴍѕ ɪɴ ʜᴇʀᴇ ᴛᴏ ѕᴇʟʟ'
+  rows: 5
+  actionbar-message: '&#34ee80+$%amount%'
+  chat-message: '&#34ee80+$%amount%'
+
+
+  items:
+    - CROPS
+    - BONE
+    - DIAMOND
+    - OAK_LEAVES
+    - NETHERITE_HELMET
+    - TROPICAL_FISH
+    - BOOK
+    - BREWING_STAND
+    - BRICK
+
+  item-settings:
+    CROPS:
+      displayname: '&#34ee80ᴄʀᴏᴘѕ'
+      material: WHEAT
+      lore:
+        - '&7Sell crops and farming materials to'
+        - '&7upgrade your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+
+    BONE:
+      displayname: '&#34ee80ᴍᴏʙ ᴅʀᴏᴘѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    DIAMOND:
+      displayname: '&#34ee80ᴏʀᴇѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    OAK_LEAVES:
+      displayname: '&#34ee80ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    NETHERITE_HELMET:
+      displayname: '&#34ee80ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    TROPICAL_FISH:
+      displayname: '&#34ee80ꜰɪѕʜ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BOOK:
+      displayname: '&#34ee80ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BREWING_STAND:
+      displayname: '&#34ee80ᴘᴏᴛɪᴏɴѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+    BRICK:
+      displayname: '&#34ee80ʙʟᴏᴄᴋѕ'
+      lore:
+        - '&7Sell items to upgrade'
+        - '&7your sell multiplier!'
+        - ''
+        - '&7Progress to &f%next-multi%x'
+        - '%progress-bar%&r &#34ee80(%progress%%)'
+
+progress-menu:
+  rows: 6
+  loading-color: '&#eee70a'
+  complete-loading-color: '&#20f706'
+  bar-length: 20
+  bar-symbol: '&m '
+  titles:
+    crops: '&#444444ᴄʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ'
+    bone: '&#444444ᴍᴏʙ ᴅʀᴏᴘѕ ᴘʀᴏɢʀᴇѕѕ'
+    diamond: '&#444444ᴏʀᴇѕ ᴘʀᴏɢʀᴇѕѕ'
+    oak_leaves: '&#444444ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ ᴘʀᴏɢʀᴇѕѕ'
+    netherite_helmet: '&#444444ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ ᴘʀᴏɢʀᴇѕѕ'
+    tropical_fish: '&#444444ꜰɪѕʜ ᴘʀᴏɢʀᴇѕѕ'
+    book: '&#444444ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋѕ ᴘʀᴏɢʀᴇѕѕ'
+    brewing_stand: '&#444444ᴘᴏᴛɪᴏɴѕ ᴘʀᴏɢʀᴇѕѕ'
+    brick: '&#444444ʙʟᴏᴄᴋ ᴘʀᴏɢʀᴇѕѕ'
+
+  filler:
+    enabled: true
+    material: GRAY_STAINED_GLASS_PANE
+    displayname: '&7 '
+    lore: []
+
+  incomplete:
+    material: WHITE_STAINED_GLASS_PANE
+    displayname: '&fɪɴᴄᴏᴍᴘʟᴇᴛᴇ'
+    lore:
+      - '&f%loading-bar%&r &f%multi%× %progress%%'
+      - '&7$%amount-needed%'
+
+  working:
+    material: YELLOW_STAINED_GLASS_PANE
+    displayname: '&#eee70aᴡᴏʀᴋɪɴɢ'
+    lore:
+      - '&#eee70a%loading-bar%&r &f%multi%× %progress%%'
+      - '&7$%amount-needed%'
+
+
+  complete:
+    material: LIME_STAINED_GLASS_PANE
+    displayname: '&#20f706ᴄᴏᴍᴘʟᴇᴛᴇ'
+    lore:
+      - '&#20f706%loading-bar%&r &#20f706%multi%× %progress%%'
+      - '&7$%amount-needed%'
+
+  back-button:
+    enabled: true
+    slot: 45
+    material: RED_STAINED_GLASS_PANE
+    displayname: '&#ee300aʙᴀᴄᴋ'
+    lore:
+      - '&fClick to return'
+
+
+
+  categories:
+    crops:
+      icon:
+        material: WHEAT
+        slot: 1
+        displayname: '&#34ee80ᴄʀᴏᴘѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    diamond:
+      icon:
+        material: DIAMOND
+        slot: 1
+        displayname: '&#34ee80ᴏʀᴇѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    brick:
+      icon:
+        material: BRICK
+        slot: 1
+        displayname: '&#34ee80ʙʟᴏᴄᴋѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    oak_leaves:
+      icon:
+        material: OAK_LEAVES
+        slot: 1
+        displayname: '&#34ee80ɴᴀᴛᴜʀᴀʟ ɪᴛᴇᴍѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    book:
+      icon:
+        material: BOOK
+        slot: 1
+        displayname: '&#34ee80ᴇɴᴄʜᴀɴᴛᴇᴅ ʙᴏᴏᴋѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    netherite_helmet:
+      icon:
+        material: NETHERITE_HELMET
+        slot: 1
+        displayname: '&#34ee80ᴀʀᴍᴏʀ ᴀɴᴅ ᴛᴏᴏʟѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    bone:
+      icon:
+        material: BONE
+        slot: 1
+        displayname: '&#34ee80ᴍᴏʙ ᴅʀᴏᴘѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    brewing_stand:
+      icon:
+        material: BREWING_STAND
+        slot: 1
+        displayname: '&#34ee80ᴘᴏᴛɪᴏɴѕ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+    tropical_fish:
+      icon:
+        material: TROPICAL_FISH
+        slot: 1
+        displayname: '&#34ee80ꜰɪѕʜ'
+        lore:
+          - '&7Sell items to upgrade'
+          - '&7your sell multiplier!'
+          - ''
+          - '&fView your progress below'
+
+
+  levels:
+    level1:
+      amountNeeded: 25000
+      multi: 1.1
+      slot: 10
+    level2:
+      amountNeeded: 150000
+      multi: 1.2
+      slot: 19
+    level3:
+      amountNeeded: 500000
+      multi: 1.3
+      slot: 28
+    level4:
+      amountNeeded: 1000000
+      multi: 1.4
+      slot: 37
+    level5:
+      amountNeeded: 5000000
+      multi: 1.5
+      slot: 38
+    level6:
+      amountNeeded: 25000000
+      multi: 1.6
+      slot: 39
+    level7:
+      amountNeeded: 250000000
+      multi: 1.7
+      slot: 30
+    level8:
+      amountNeeded: 550000000
+      multi: 1.8
+      slot: 21
+    level9:
+      amountNeeded: 850000000
+      multi: 1.9
+      slot: 12
+    level10:
+      amountNeeded: 1000000000
+      multi: 2
+      slot: 13
+    level11:
+      amountNeeded: 2000000000
+      multi: 2.1
+      slot: 14
+    level12:
+      amountNeeded: 4000000000
+      multi: 2.2
+      slot: 23
+    level13:
+      amountNeeded: 8000000000
+      multi: 2.3
+      slot: 32
+    level14:
+      amountNeeded: 10000000000
+      multi: 2.4
+      slot: 41
+    level15:
+      amountNeeded: 20000000000
+      multi: 2.5
+      slot: 42
+    level16:
+      amountNeeded: 40000000000
+      multi: 2.6
+      slot: 43
+    level17:
+      amountNeeded: 80000000000
+      multi: 2.7
+      slot: 34
+    level18:
+      amountNeeded: 160000000000
+      multi: 2.8
+      slot: 25
+    level19:
+      amountNeeded: 320000000000
+      multi: 2.9
+      slot: 16
+    level20:
+      amountNeeded: 640000000000
+      multi: 3
+      slot: 7
+
+sellhistory-menu:
+  title: '&#444444Sell history (Page %history-page%)'
+  rows: 6
+  sold-items:
+    displayname: '&r%Item-Name%'
+    lore:
+      - '&fTotal amount: &#34ee80%amount-sold%'
+      - '&fTotal price: &#34ee80%price-sold%'
+  history-back:
+    slot: 45
+    displayname: '&#34ee80ʙᴀᴄᴋ'
+    material: ARROW
+    lore:
+      - '&fClick to go back'
+  history-next:
+    slot: 53
+    displayname: '&#34ee80ɴᴇхᴛ'
+    material: ARROW
+    lore:
+      - '&fClick to go forward'
+
+  history-sort:
+    material: HOPPER
+    slot: 50
+    displayname: '&#34ee80ѕᴏʀᴛ'
+    NotCurrentColor: '&f'
+    CurrentColor: '&#34ee80'
+    lore:
+      - • Highest Price
+      - • Lowest Price
+      - • Name
+
+  history-refresh:
+    material: ANVIL
+    slot: 49
+    displayname: '&#34ee80ʀᴇꜰʀᴇѕʜ'
+    lore:
+      - '&fClick to refresh'
+
+  history-player:
+    material: PLAYER_HEAD
+    slot: 48
+    displayname: '&#34ee80%player%'
+    lore:
+      - '&fTotal sold: &#34ee80%sell_totalsold%'
+
+item-prices-menu:
+  title: '&#444444Item Prices (Page %page%)'
+  rows: 6
+
+  previous:
+    previous-page-material: ARROW
+    previous-page-slot: 45
+    previous-page-displayname: '&#34ee80ʙᴀᴄᴋ'
+    previous-page-lore:
+      - '&fClick to go back'
+
+  next:
+    next-page-material: ARROW
+    next-page-slot: 53
+    next-page-displayname: '&#34ee80ɴᴇхᴛ'
+    next-page-lore:
+      - '&fClick to go forward'
+
+  filter:
+    material: CAULDRON
+    slot: 48
+    displayname: '&#34ee80ꜰɪʟᴛᴇʀ'
+    NotCurrentColor: '&f'
+    CurrentColor: '&#34ee80'
+    lore:
+      - all
+      - crops
+      - bone
+      - diamond
+      - oak_leaves
+      - netherite_helmet
+      - tropical_fish
+      - book
+      - brewing_stand
+      - brick
+
+  refresh:
+    material: ANVIL
+    slot: 49
+    displayname: '&#34ee80ʀᴇꜰʀᴇѕʜ'
+    lore:
+      - '&fClick to refresh'
+
+  sort:
+    material: HOPPER
+    slot: 50
+    displayname: '&#34ee80ѕᴏʀᴛ'
+    NotCurrentColor: '&f'
+    CurrentColor: '&#34ee80'
+    lore:
+      - Highest Price
+      - Lowest Price
+      - Name
+
+  items:
+    displayname: '&r%ItemName%'
+    lore:
+      - '&fPrice: &#34ee80$%amount%'
+
+default-value: 0.1
+
+categories:
+  # CROPS
+  crops:
+    - wheat-value: 18.0
+    - beetroot-value: 10.0
+    - carrot-value: 16.0
+    - potato-value: 16.0
+    - poisonous_potato-value: 32.0
+    - melon-value: 6.0
+    - pumpkin-value: 16.0
+    - bamboo-value: 3.0
+    - cocoa_beans-value: 10.0
+    - cactus-value: 10.0
+    - sweet_berries-value: 8.0
+    - sugar_cane-value: 10.0
+    - red_mushroom-value: 1.0
+    - brown_mushroom-value: 1.0
+    - kelp-value: 6.0
+    - sea_pickle-value: 2.0
+    - glow_berries-value: 4.0
+    - wheat_seeds-value: 2.0
+    - pumpkin_seeds-value: 4.0
+    - melon_seeds-value: 4.0
+    - beetroot_seeds-value: 2.0
+    - torchflower_seeds-value: 3.0
+    - torchflower-value: 4.0
+    - nether_wart-value: 16.0
+    - spruce_sapling-value: 3.0
+    - twisting_vines-value: 5.0
+    - nether_sprouts-value: 5.0
+    - crimson_fungus-value: 2.0
+    - bone_meal-value: 1.0
+    - jungle_sapling-value: 3.0
+    - birch_sapling-value: 3.0
+    - oak_sapling-value: 3.0
+    - cherry_sapling-value: 1.0
+    - dark_oak_sapling-value: 3.0
+    - acacia_sapling-value: 3.0
+    - warped_fungus-value: 2.0
+    - hanging_roots-value: 2.0
+    - crimson_roots-value: 2.0
+    - warped_roots-value: 2.0
+    - azalea-value: 1.0
+    - flowering_azalea-value: 3.0
+    - weeping_vines-value: 5.0
+    - chorus_flower-value: 3.0
+    - chorus_fruit-value: 4.0
+    - big_dripleaf-value: 3.0
+    - small_dripleaf-value: 3.0
+
+
+
+  bone:
+    - feather-value: 6
+    - string-value: 0.5
+    - cooked_chicken-value: 8.0
+    - chicken-value: 6.0
+    - glow_ink_sac-value: 150.0
+    - beef-value: 1.0
+    - cooked_beef-value: 5.0
+    - leather-value: 40.0
+    - cooked_cod-value: 2.0
+    - cod-value: 6.0
+    - porkchop-value: 0.2
+    - cooked_porkchop-value: 4
+    - pufferfish-value: 5.0
+    - rabbit_hide-value: 5.0
+    - cooked_rabbit-value: 20.0
+    - rabbit-value: 6.0
+    - cooked_salmon-value: 2.0
+    - salmon-value: 6.0
+    - mutton-value: 3.0
+    - cooked_mutton-value: 3.0
+    - bone_meal-value: 1.0
+    - snowball-value: 0.25
+    - ink_sac-value: 50.0
+    - tropical_fish-value: 1.0
+    - seagrass-value: 2.0
+    - bowl-value: 3.0
+    - rotten_flesh-value: 1.0
+    - spider_eye-value: 0.5
+    - ender_pearl-value: 2.0
+    - poppy-value: 1.0
+    - blaze_rod-value: 2.0
+    - prismarine_shard-value: 10.0
+    - prismarine_crystals-value: 15.0
+    - wet_sponge-value: 400.0
+    - tide_armor_trim_smithing_template-value: 250.0
+    - totem_of_undying-value: 250.0
+    - emerald-value: 8.0
+    - ghast_tear-value: 30.0
+    - gunpowder-value: 1.0
+    - magma_cream-value: 16.0
+    - phantom_membrane-value: 5.0
+    - arrow-value: 1.2
+    - saddle-value: 500.0
+    - shulker_shell-value: 50.0
+    - slime_ball-value: 15.0
+    - baked_potato-value: 28.0
+    - copper_ingot-value: 14.0
+    - fishing_rod-value: 8.0
+
+
+
+
+  # ORES
+  diamond:
+    - coal_ore-value: 28.0
+    - deepslate_coal_ore-value: 4.0
+    - iron_ore-value: 16.0
+    - deepslate_iron_ore-value: 20.0
+    - copper_ore-value: 20.0
+    - deepslate_copper_ore-value: 26.0
+    - gold_ore-value: 20.0
+    - deepslate_gold_ore-value: 34.0
+    - redstone_ore-value: 12.0
+    - deepslate_redstone_ore-value: 36.0
+    - emerald_ore-value: 20.0
+    - deepslate_emerald_ore-value: 1000.0
+    - lapis_ore-value: 4.0
+    - deepslate_lapis_ore-value: 36.0
+    - deepslate_diamond_ore-value: 180.0
+    - nether_gold_ore-value: 24.0
+    - nether_quartz_ore-value: 20.0
+    - diamond_ore-value: 100.0
+    - diamond_block-value: 1100.0
+    - netherite_block-value: 225000.0
+    - emerald_block-value: 72.0
+    - redstone_block-value: 450.0
+    - iron_block-value: 45.0
+    - lapis_block-value: 72.0
+    - gold_block-value: 45.0
+    - copper_block-value: 25.0
+    - charcoal-value: 8.0
+    - coal-value: 12.0
+    - raw_iron-value: 20.0
+    - raw_gold-value: 40.0
+    - diamond-value: 120.0
+    - quartz-value: 5.0
+    - raw_copper-value: 20.0
+    - iron_ingot-value: 5.0
+    - copper_ingot-value: 14.0
+    - gold_ingot-value: 5.0
+    - netherite_ingot-value: 25000.0
+    - amethyst_cluster-value: 4.0
+    - large_amethyst_bud-value: 28.0
+    - medium_amethyst_bud-value: 20.0
+    - small_amethyst_bud-value: 16.0
+    - amethyst_shard-value: 50.0
+    - echo_shard-value: 30.0
+    - clay_ball-value: 2.0
+    - lapis_lazuli-value: 8.0
+    - iron_nugget-value: 0.5
+    - gold_nugget-value: 0.5
+    - ancient_debris-value: 600.0
+    - netherite_scrap-value: 3000.0
+    - glowstone_dust-value: 1.0
+    - redstone-value: 50.0
+    - brick-value: 5.0
+
+
+  # ARMOR AND TOOLS
+  netherite_helmet:
+    - diamond_shovel-value: 50.0
+    - diamond_pickaxe-value: 35.0
+    - diamond_axe-value: 35.0
+    - diamond_hoe-value: 25.0
+    - diamond_sword-value: 35.0
+    - diamond_helmet-value: 30.0
+    - diamond_chestplate-value: 40.0
+    - diamond_leggings-value: 35.0
+    - diamond_boots-value: 25.0
+    - chainmail_helmet-value: 15.0
+    - chainmail_chestplate-value: 20.0
+    - chainmail_leggings-value: 20.0
+    - chainmail_boots-value: 15.0
+    - leather_horse_armor-value: 10.0
+    - iron_horse_armor-value: 100.0
+    - golden_horse_armor-value: 300.0
+    - diamond_horse_armor-value: 500.0
+    - iron_shovel-value: 5.0
+    - iron_pickaxe-value: 5.0
+    - iron_axe-value: 5.0
+    - iron_hoe-value: 10.0
+    - iron_sword-value: 10.0
+    - iron_helmet-value: 25.0
+    - iron_chestplate-value: 35.0
+    - iron_leggings-value: 30.0
+    - iron_boots-value: 20.0
+    - netherite_shovel-value: 100.0
+    - netherite_pickaxe-value: 300.0
+    - netherite_axe-value: 300.0
+    - netherite_hoe-value: 200.0
+    - netherite_sword-value: 200.0
+    - netherite_helmet-value: 1100.0
+    - netherite_chestplate-value: 1400.0
+    - netherite_leggings-value: 1300.0
+    - netherite_boots-value: 1000.0
+    - golden_shovel-value: 5.0
+    - golden_pickaxe-value: 15.0
+    - golden_axe-value: 15.0
+    - golden_sword-value: 10.0
+    - golden_hoe-value: 5.0
+    - golden_helmet-value: 30.0
+    - golden_chestplate-value: 48.0
+    - golden_leggings-value: 42.0
+    - golden_boots-value: 24.0
+    - bow-value: 7.0
+    - crossbow-value: 10.0
+    - fishing_rod-value: 8.0
+    - lead-value: 5.0
+    - compass-value: 30.0
+    - recovery_compass-value: 50.0
+    - shears-value: 4.0
+    - brush-value: 3.0
+    - flint_and_steel-value: 6.0
+    - elytra-value: 30000.0
+    - firework_rocket-value: 6.0
+    - clock-value: 25.0
+    - spyglass-value: 50.0
+    - wooden_shovel-value: 8.0
+    - wooden_pickaxe-value: 16.0
+    - wooden_axe-value: 4.0
+    - wooden_hoe-value: 12.0
+    - wooden_sword-value: 10.0
+    - stone_pickaxe-value: 16.0
+    - stone_axe-value: 16.0
+    - stone_sword-value: 10.0
+    - stone_hoe-value: 4.0
+    - stone_shovel-value: 6.0
+    - leather_boots-value: 8.0
+    - leather_leggings-value: 14.0
+    - leather_chestplate-value: 16.0
+    - leather_helmet-value: 10.0
+    - turtle_helmet-value: 200.0
+    - trident-value: 10000.0
+    - armor_stand-value: 20.0
+    - bucket-value: 15.0
+    - milk_bucket-value: 60.0
+    - powder_snow_bucket-value: 5.0
+    - lava_bucket-value: 60.0
+    - water_bucket-value: 50.0
+    - netherite_upgrade_smithing_template-value: 500.0
+    - sentry_armor_trim_smithing_template-value: 250.0
+    - vex_armor_trim_smithing_template-value: 250.0
+    - wild_armor_trim_smithing_template-value: 250.0
+    - coast_armor_trim_smithing_template-value: 250.0
+    - dune_armor_trim_smithing_template-value: 250.0
+    - wayfinder_armor_trim_smithing_template-value: 250.0
+    - raiser_armor_trim_smithing_template-value: 250.0
+    - shaper_armor_trim_smithing_template-value: 250.0
+    - host_armor_trim_smithing_template-value: 250.0
+    - ward_armor_trim_smithing_template-value: 250.0
+    - silence_armor_trim_smithing_template-value: 250.0
+    - tide_armor_trim_smithing_template-value: 250.0
+    - snout_armor_trim_smithing_template-value: 250.0
+    - rib_armor_trim_smithing_template-value: 250.0
+    - eye_armor_trim_smithing_template-value: 250.0
+    - spire_armor_trim_smithing_template-value: 250.0
+
+
+  # FISH
+  tropical_fish:
+    - tropical_fish-value: 1
+    - pufferfish-value: 5.0
+    - tropical_fish_bucket-value: 150.0
+    - pufferfish_bucket-value: 150.0
+    - cod-value: 6.0
+    - cooked_cod-value: 2.0
+    - cod_bucket-value: 150.0
+    - salmon_bucket-value: 150.0
+    - salmon-value: 6.0
+    - fishing_rod-value: 8.0
+    - bowl-value: 3.0
+    - name_tag-value: 200.0
+    - nautilus_shell-value: 100.0
+    - saddle-value: 500.0
+    - lily_pad-value: 4.0
+    - leather-value: 40.0
+    - cooked_salmon-value: 2.0
+    - axolotl_bucket-value: 25.0
+    - tadpole_bucket-value: 100.0
+    - heart_of_the_sea-value: 400.0
+
+
+  # ENCHANTED BOOKS
+  book:
+    - density1-value: 80.0
+    - density2-value: 80.0
+    - density3-value: 80.0
+    - density4-value: 80.0
+    - density5-value: 80.0
+    - swift_sneak1-value: 80.0
+    - swift_sneak2-value: 80.0
+    - swift_sneak3-value: 80.0
+    - breach1-value: 80.0
+    - breach2-value: 80.0
+    - breach3-value: 80.0
+    - breach4-value: 80.0
+    - feather_falling1-value: 80.0
+    - feather_falling2-value: 80.0
+    - feather_falling3-value: 80.0
+    - feather_falling4-value: 80.0
+    - infinity1-value: 80.0
+    - flame1-value: 80.0
+    - impaling1-value: 80.0
+    - impaling2-value: 80.0
+    - impaling3-value: 80.0
+    - impaling4-value: 80.0
+    - impaling5-value: 80.0
+    - protection1-value: 80.0
+    - protection2-value: 80.0
+    - protection3-value: 80.0
+    - protection4-value: 80.0
+    - knockback1-value: 80.0
+    - knockback2-value: 80.0
+    - depth_strider1-value: 80.0
+    - depth_strider2-value: 80.0
+    - depth_strider3-value: 80.0
+    - luck_of_the_sea1-value: 80.0
+    - luck_of_the_sea2-value: 80.0
+    - luck_of_the_sea3-value: 80.0
+    - silk_touch1-value: 80.0
+    - loyalty1-value: 80.0
+    - loyalty2-value: 80.0
+    - loyalty3-value: 80.0
+    - vanishing_curse1-value: 80.0
+    - fire_protection1-value: 80.0
+    - fire_protection2-value: 80.0
+    - fire_protection3-value: 80.0
+    - fire_protection4-value: 80.0
+    - channeling1-value: 80.0
+    - binding_curse1-value: 80.0
+    - quick_charge1-value: 80.0
+    - quick_charge2-value: 80.0
+    - quick_charge3-value: 80.0
+    - bane_of_arthropods1-value: 80.0
+    - bane_of_arthropods2-value: 80.0
+    - bane_of_arthropods3-value: 80.0
+    - bane_of_arthropods4-value: 80.0
+    - bane_of_arthropods5-value: 80.0
+    - frost_walker1-value: 80.0
+    - frost_walker2-value: 80.0
+    - multishot1-value: 80.0
+    - projectile_protection1-value: 80.0
+    - projectile_protection2-value: 80.0
+    - projectile_protection3-value: 80.0
+    - projectile_protection4-value: 80.0
+    - aqua_affinity1-value: 80.0
+    - soul_speed1-value: 80.0
+    - soul_speed2-value: 80.0
+    - soul_speed3-value: 80.0
+    - wind_burst1-value: 80.0
+    - wind_burst2-value: 80.0
+    - wind_burst3-value: 80.0
+    - looting1-value: 80.0
+    - looting2-value: 80.0
+    - looting3-value: 80.0
+    - smite1-value: 80.0
+    - smite2-value: 80.0
+    - smite3-value: 80.0
+    - smite4-value: 80.0
+    - smite5-value: 80.0
+    - piercing1-value: 80.0
+    - piercing2-value: 80.0
+    - piercing3-value: 80.0
+    - piercing4-value: 80.0
+    - lure1-value: 80.0
+    - lure2-value: 80.0
+    - lure3-value: 80.0
+    - riptide1-value: 80.0
+    - riptide2-value: 80.0
+    - riptide3-value: 80.0
+    - power1-value: 80.0
+    - power2-value: 80.0
+    - power3-value: 80.0
+    - power4-value: 80.0
+    - power5-value: 80.0
+    - blast_protection1-value: 80.0
+    - blast_protection2-value: 80.0
+    - blast_protection3-value: 80.0
+    - blast_protection4-value: 80.0
+    - mending1-value: 80.0
+    - fire_aspect1-value: 80.0
+    - fire_aspect2-value: 80.0
+    - respiration1-value: 80.0
+    - respiration2-value: 80.0
+    - respiration3-value: 80.0
+    - thorns1-value: 80.0
+    - thorns2-value: 80.0
+    - thorns3-value: 80.0
+    - sweeping_edge1-value: 80.0
+    - sweeping_edge2-value: 80.0
+    - sweeping_edge3-value: 80.0
+    - punch1-value: 80.0
+    - punch2-value: 80.0
+    - sharpness1-value: 80.0
+    - sharpness2-value: 80.0
+    - sharpness3-value: 80.0
+    - sharpness4-value: 80.0
+    - sharpness5-value: 80.0
+    - efficiency1-value: 80.0
+    - efficiency2-value: 80.0
+    - efficiency3-value: 80.0
+    - efficiency4-value: 80.0
+    - efficiency5-value: 80.0
+    - fortune1-value: 80.0
+    - fortune2-value: 80.0
+    - fortune3-value: 80.0
+    - unbreaking1-value: 80.0
+    - unbreaking2-value: 80.0
+    - unbreaking3-value: 80.0
+
+
+  # POTIONS
+  brewing_stand:
+    - potion-value: 10.0
+    - mundane-value: 10.0
+    - thick-value: 10.0
+    - awkward-value: 10.0
+    - night_vision-value: 10.0
+    - long_night_vision-value: 10.0
+    - invisibility-value: 10.0
+    - long_invisibility-value: 10.0
+    - leaping-value: 10.0
+    - long_leaping-value: 10.0
+    - strong_leaping-value: 10.0
+    - fire_resistance-value: 10.0
+    - long_fire_resistance-value: 10.0
+    - swiftness-value: 10.0
+    - long_swiftness-value: 10.0
+    - strong_swiftness-value: 10.0
+    - slowness-value: 10.0
+    - long_slowness-value: 10.0
+    - strong_slowness-value: 10.0
+    - water_breathing-value: 10.0
+    - long_water_breathing-value: 10.0
+    - healing-value: 10.0
+    - strong_healing-value: 10.0
+    - harming-value: 10.0
+    - strong_harming-value: 10.0
+    - poison-value: 10.0
+    - long_poison-value: 10.0
+    - strong_poison-value: 10.0
+    - regeneration-value: 10.0
+    - long_regeneration-value: 10.0
+    - strong_regeneration-value: 10.0
+    - strength-value: 10.0
+    - long_strength-value: 10.0
+    - strong_strength-value: 10.0
+    - weakness-value: 10.0
+    - long_weakness-value: 10.0
+    - turtle_master-value: 10.0
+    - long_turtle_master-value: 10.0
+    - strong_turtle_master-value: 10.0
+    - slow_falling-value: 10.0
+    - long_slow_falling-value: 10.0
+    - wind_charged-value: 10.0
+    - weaving-value: 10.0
+    - oozing-value: 10.0
+    - infested-value: 10.0
+    - splash_water-value: 13.0
+    - splash_mundane-value: 13.0
+    - splash_thick-value: 13.0
+    - splash_awkward-value: 13.0
+    - splash_night_vision-value: 13.0
+    - splash_long_night_vision-value: 13.0
+    - splash_invisibility-value: 13.0
+    - splash_long_invisibility-value: 13.0
+    - splash_leaping-value: 13.0
+    - splash_long_leaping-value: 13.0
+    - splash_strong_leaping-value: 13.0
+    - splash_fire_resistance-value: 13.0
+    - splash_long_fire_resistance-value: 13.0
+    - splash_swiftness-value: 13.0
+    - splash_long_swiftness-value: 13.0
+    - splash_strong_swiftness-value: 13.0
+    - splash_slowness-value: 13.0
+    - splash_long_slowness-value: 13.0
+    - splash_strong_slowness-value: 13.0
+    - splash_water_breathing-value: 13.0
+    - splash_long_water_breathing-value: 13.0
+    - splash_healing-value: 13.0
+    - splash_strong_healing-value: 13.0
+    - splash_harming-value: 13.0
+    - splash_strong_harming-value: 13.0
+    - splash_poison-value: 13.0
+    - splash_long_poison-value: 13.0
+    - splash_strong_poison-value: 13.0
+    - splash_regeneration-value: 13.0
+    - splash_long_regeneration-value: 13.0
+    - splash_strong_regeneration-value: 13.0
+    - splash_strength-value: 13.0
+    - splash_long_strength-value: 13.0
+    - splash_strong_strength-value: 13.0
+    - splash_weakness-value: 13.0
+    - splash_long_weakness-value: 13.0
+    - splash_turtle_master-value: 13.0
+    - splash_long_turtle_master-value: 13.0
+    - splash_strong_turtle_master-value: 13.0
+    - splash_slow_falling-value: 13.0
+    - splash_long_slow_falling-value: 13.0
+    - splash_wind_charged-value: 13.0
+    - splash_weaving-value: 13.0
+    - splash_oozing-value: 13.0
+    - splash_infested-value: 13.0
+
+  # NATURAL ITEMS
+  oak_leaves:
+    - oak_log-value: 16.0
+    - spruce_log-value: 16.0
+    - birch_log-value: 16.0
+    - jungle_log-value: 16.0
+    - acacia_log-value: 16.0
+    - dark_oak_log-value: 16
+    - crimson_stem-value: 16.0
+    - warped_stem-value: 16.0
+    - stripped_oak_log-value: 16.0
+    - stripped_spruce_log-value: 16.0
+    - stripped_birch_log-value: 16.0
+    - stripped_jungle_log-value: 16.0
+    - stripped_acacia_log-value: 16.0
+    - stripped_dark_oak_log-value: 16.0
+    - stripped_crimson_stem-value: 16.0
+    - stripped_warped_stem-value: 16.0
+    - oak_wood-value: 8.0
+    - spruce_wood-value: 8.0
+    - birch_wood-value: 8.0
+    - jungle_wood-value: 8.0
+    - acacia_wood-value: 8.0
+    - dark_oak_wood-value: 8.0
+    - crimson_hyphae-value: 8.0
+    - warped_hyphae-value: 8.0
+    - stripped_oak_wood-value: 16.0
+    - stripped_spruce_wood-value: 16.0
+    - stripped_birch_wood-value: 16.0
+    - stripped_jungle_wood-value: 16.0
+    - stripped_acacia_wood-value: 16.0
+    - stripped_dark_oak_wood-value: 16.0
+    - stripped_crimson_hyphae-value: 16.0
+    - stripped_warped_hyphae-value: 16.0
+    - oak_leaves-value: 2.0
+    - spruce_leaves-value: 2.0
+    - birch_leaves-value: 2.0
+    - jungle_leaves-value: 2.0
+    - acacia_leaves-value: 2.0
+    - dark_oak_leaves-value: 2.0
+    - nether_wart_block-value: 14.0
+    - warped_wart_block-value: 4.0
+    - grass_block-value: 4.0
+    - fern-value: 1.0
+    - dead_bush-value: 8.0
+    - seagrass-value: 2.0
+    - dandelion-value: 1.0
+    - poppy-value: 1.0
+    - blue_orchid-value: 1.0
+    - pink_petals-value: 4.0
+    - allium-value: 1.0
+    - azure_bluet-value: 1.0
+    - red_tulip-value: 1.0
+    - orange_tulip-value: 1.0
+    - white_tulip-value: 1.0
+    - pink_tulip-value: 1.0
+    - oxeye_daisy-value: 1.0
+    - cornflower-value: 1.0
+    - azalea_leaves-value: 2.0
+    - flowering_azalea_leaves-value: 2.0
+    - cherry_leaves-value: 4.0
+    - mangrove_leaves-value: 2.0
+    - lily_of_the_valley-value: 1.0
+    - wither_rose-value: 25.0
+    - sunflower-value: 1.0
+    - lilac-value: 1.0
+    - rose_bush-value: 1.0
+    - peony-value: 1.0
+    - mangrove_propagule-value: 4.0
+    - goat_horn-value: 150.0
+    - frogspawn-value: 10.0
+    - ochre_froglight-value: 3.0
+    - pearlescent_froglight-value: 3.0
+    - verdant_froglight-value: 3.0
+    - black_dye-value: 30.0
+    - blue_dye-value: 1.0
+    - brown_dye-value: 1.0
+    - light_blue_dye-value: 1.0
+    - gray_dye-value: 1.0
+    - cyan_dye-value: 1.0
+    - green_dye-value: 1.0
+    - light_gray_dye-value: 1.0
+    - light_blue_dye-value: 1.0
+    - yellow_dye-value: 1.0
+    - white_dye-value: 1.0
+    - red_dye-value: 1.0
+    - purple_dye-value: 1.0
+    - pink_dye-value: 1.0
+    - orange_dye-value: 1.0
+    - magenta_dye-value: 1.0
+    - lime_dye-value: 1.0
+    - pink_petals-value: 4.0
+    - large_fern-value: 2.0
+    - spore_blossom-value: 1.0
+    - brain_coral-value: 8.0
+    - bubble_coral-value: 8.0
+    - fire_coral-value: 8.0
+    - horn_coral-value: 8.0
+    - tube_coral-value: 8.0
+    - brain_coral_fan-value: 8.0
+    - bubble_coral_fan-value: 8.0
+    - fire_coral_fan-value: 8.0
+    - horn_coral_fan-value: 8.0
+    - tube_coral_fan-value: 8.0
+    - dead_brain_coral-value: 8.0
+    - dead_bubble_coral-value: 8.0
+    - dead_fire_coral-value: 8.0
+    - dead_horn_coral-value: 8.0
+    - dead_tube_coral-value: 8.0
+    - dead_brain_coral_fan-value: 8.0
+    - dead_bubble_coral_fan-value: 8.0
+    - dead_fire_coral_fan-value: 8.0
+    - dead_tube_coral_fan-value: 8.0
+    - sea_lantern-value: 110.0
+    - shroomlight-value: 4.0
+    - honeycomb_block-value: 20.0
+    - nether_wart-value: 16.0
+    - chorus_fruit-value: 4.0
+    - chorus_flower-value: 3.0
+    - chorus_plant-value: 3.0
+
+
+
+
+  # BLOCKS
+  brick:
+    - andesite-value: 4.0
+    - acacia_planks-value: 4.0
+    - acacia_slab-value: 4.0
+    - acacia_fence-value: 4.0
+    - acacia_stairs-value: 2.0
+    - andesite_wall-value: 8.0
+    - anvil-value: 120.0
+    - andesite_stairs-value: 4.0
+    - andesite_slab-value: 4.0
+    - acacia_button-value: 4.0
+    - acacia_pressure_plate-value: 4.0
+    - acacia_door-value: 8.0
+    - acacia_trapdoor-value: 4.0
+    - acacia_fence_gate-value: 4.0
+    - activator_rail-value: 7.0
+    - acacia_sign-value: 9.0
+    - acacia_hanging_sign-value: 9.0
+    - birch_planks-value: 4.0
+    - bamboo_planks-value: 4.0
+    - bamboo_mosaic-value: 1.0
+    - coal_block-value: 110.0
+    - raw_iron_block-value: 160.0
+    - raw_copper_block-value: 180.0
+    - raw_gold_block-value: 360.0
+    - amethyst_block-value: 200.0
+    - bamboo_block-value: 36.0
+    - stripped_bamboo_block-value: 4.0
+    - blue_wool-value: 4.0
+    - brown_wool-value: 4.0
+    - black_wool-value: 4.0
+    - birch_slab-value: 4.0
+    - bamboo_slab-value: 4.0
+    - bamboo_mosaic_slab-value: 4.0
+    - brick_slab-value: 4.0
+    - bricks-value: 5.0
+    - bookshelf-value: 100.0
+    - birch_fence-value: 4.0
+    - bamboo_fence-value: 4.0
+    - basalt-value: 4.0
+    - brown_mushroom_block-value: 9.0
+    - brick_stairs-value: 4.0
+    - birch_stairs-value: 4.0
+    - bamboo_stairs-value: 4.0
+    - bamboo_mosaic_stairs-value: 4.0
+    - beacon-value: 7500.0
+    - granite_wall-value: 8.0
+    - blackstone_wall-value: 8.0
+    - quartz_block-value: 4.0
+    - blue_terracotta-value: 6.0
+    - brown_terracotta-value: 6.0
+    - black_terracotta-value: 6.0
+    - blue_carpet-value: 2.0
+    - brown_carpet-value: 2.0
+    - black_carpet-value: 2.0
+    - blue_stained_glass-value: 6.0
+    - brown_stained_glass-value: 6.0
+    - black_stained_glass-value: 6.0
+    - blue_stained_glass_pane-value: 3.0
+    - brown_stained_glass_pane-value: 3.0
+    - black_stained_glass_pane-value: 3.0
+    - bone_block-value: 9.0
+    - blue_shulker_box-value: 75.0
+    - brown_shulker_box-value: 75.0
+    - black_shulker_box-value: 75.0
+    - blue_glazed_terracotta-value: 3.0
+    - brown_glazed_terracotta-value: 3.0
+    - black_glazed_terracotta-value: 3.0
+    - blue_concrete-value: 8.0
+    - brown_concrete-value: 8.0
+    - black_concrete-value: 8.0
+    - blue_concrete_powder-value: 4.0
+    - brown_concrete_powder-value: 4.0
+    - black_concrete_powder-value: 4.0
+    - brain_coral_block-value: 8.0
+    - bubble_coral_block-value: 8.0
+    - blue_ice-value: 75.0
+    - birch_button-value: 4.0
+    - bamboo_button-value: 4.0
+    - birch_pressure_plate-value: 4.0
+    - bamboo_pressure_plate-value: 2.0
+    - birch_door-value: 8.0
+    - bamboo_door-value: 8.0
+    - birch_trapdoor-value: 4.0
+    - bamboo_trapdoor-value: 4.0
+    - birch_fence_gate-value: 4.0
+    - bamboo_fence_gate-value: 4.0
+    - birch_sign-value: 9.0
+    - bamboo_sign-value: 5.0
+    - birch_hanging_sign-value: 9.0
+    - bamboo_hanging_sign-value: 9.0
+    - blue_bed-value: 45.0
+    - brown_bed-value: 45.0
+    - black_bed-value: 45.0
+    - brewing_stand-value: 15.0
+    - blue_banner-value: 50.0
+    - brown_banner-value: 50.0
+    - black_banner-value: 50.0
+    - barrel-value: 10.0
+    - blast_furnace-value: 15.0
+    - bell-value: 40.0
+    - bee_nest-value: 100.0
+    - beehive-value: 100.0
+    - blackstone-value: 4.0
+    - blackstone_slab-value: 4.0
+    - blackstone_stairs-value: 4.0
+    - blue_candle-value: 18.0
+    - brown_candle-value: 18.0
+    - black_candle-value: 18.0
+    - cobbled_deepslate-value: 4.0
+    - calcite-value: 4.0
+    - chiseled_tuff-value: 4.0
+    - chiseled_tuff_bricks-value: 4.0
+    - coarse_dirt-value: 6.0
+    - crimson_nylium-value: 1.0
+    - cobblestone-value: 3.0
+    - cherry_planks-value: 4.0
+    - crimson_planks-value: 4.0
+    - chiseled_copper-value: 4.0
+    - cut_copper-value: 5.0
+    - cut_copper_stairs-value: 5.0
+    - cut_copper_slab-value: 5.0
+    - cherry_log-value: 4.0
+    - cherry_wood-value: 4.0
+    - chiseled_sandstone-value: 4.0
+    - cut_sandstone-value: 4.0
+    - cobweb-value: 3.0
+    - cyan_wool-value: 4.0
+    - cherry_slab-value: 4.0
+    - crimson_slab-value: 4.0
+    - cut_sandstone_slab-value: 4.0
+    - cobblestone_slab-value: 2.0
+    - chiseled_bookshelf-value: 40.0
+    - chest-value: 32.0
+    - crafting_table-value: 8.0
+    - cobblestone_stairs-value: 4.0
+    - clay-value: 8.0
+    - cherry_fence-value: 4.0
+    - crimson_fence-value: 4.0
+    - carved_pumpkin-value: 20.0
+    - cracked_stone_bricks-value: 4.0
+    - chiseled_stone_bricks-value: 4.0
+    - cracked_deepslate_bricks-value: 4.0
+    - cracked_deepslate_tiles-value: 4.0
+    - chiseled_deepslate-value: 4.0
+    - chain-value: 1.0
+    - cracked_nether_bricks-value: 4.0
+    - chiseled_nether_bricks-value: 4.0
+    - cherry_stairs-value: 4.0
+    - crimson_stairs-value: 4.0
+    - cobblestone_wall-value: 8.0
+    - cobbled_deepslate_wall-value: 8.0
+    - chipped_anvil-value: 45.0
+    - chiseled_quartz_block-value: 3.0
+    - cyan_terracotta-value: 6.0
+    - cyan_carpet-value: 2.0
+    - cyan_stained_glass-value: 6.0
+    - cyan_stained_glass_pane-value: 3.0
+    - chiseled_red_sandstone-value: 4.0
+    - cut_red_sandstone-value: 4.0
+    - cyan_shulker_box-value: 75.0
+    - cyan_glazed_terracotta-value: 3.0
+    - cyan_concrete-value: 8.0
+    - cyan_concrete_powder-value: 4.0
+    - conduit-value: 550.0
+    - cobbled_deepslate_stairs-value: 4.0
+    - cobbled_deepslate_slab-value: 4.0
+    - calibrated_sculk_sensor-value: 20.0
+    - cherry_button-value: 4.0
+    - crimson_button-value: 4.0
+    - cherry_pressure_plate-value: 2.0
+    - crimson_pressure_plate-value: 4.0
+    - cherry_door-value: 8.0
+    - crimson_door-value: 8.0
+    - copper_door-value: 8.0
+    - cherry_trapdoor-value: 4.0
+    - crimson_trapdoor-value: 4.0
+    - copper_trapdoor-value: 4.0
+    - cherry_fence_gate-value: 4.0
+    - crimson_fence_gate-value: 4.0
+    - cherry_sign-value: 5.0
+    - crimson_sign-value: 9.0
+    - cherry_hanging_sign-value: 9.0
+    - crimson_hanging_sign-value: 9.0
+    - cake-value: 180.0
+    - cyan_bed-value: 45.0
+    - crafter-value: 5.0
+    - cauldron-value: 14.0
+    - creeper_head-value: 1000.0
+    - cyan_banner-value: 50.0
+    - composter-value: 0.5
+    - cartography_table-value: 10.0
+    - campfire-value: 4.0
+    - crying_obsidian-value: 25.0
+    - chiseled_polished_blackstone-value: 4.0
+    - cracked_polished_blackstone_bricks-value: 4.0
+    - candle-value: 18.0
+    - cyan_candle-value: 18.0
+    - copper_grate-value: 4.0
+    - copper_bulb-value: 3.0
+    - diorite-value: 4.0
+    - deepslate-value: 4.0
+    - dripstone_block-value: 6.0
+    - dirt-value: 2.0
+    - dark_oak_planks-value: 4.0
+    - dark_oak_slab-value: 4.0
+    - dark_prismarine_slab-value: 4.0
+    - decorated_pot-value: 4.0
+    - dark_oak_fence-value: 4.0
+    - deepslate_bricks-value: 4.0
+    - deepslate_tiles-value: 4.0
+    - dragon_egg-value: 2.14E9
+    - dark_oak_stairs-value: 2.0
+    - diorite_wall-value: 8.0
+    - damaged_anvil-value: 30.0
+    - dark_prismarine-value: 3.0
+    - dark_prismarine_stairs-value: 4.0
+    - dead_tube_coral_block-value: 8.0
+    - dead_brain_coral_block-value: 8.0
+    - dead_bubble_coral_block-value: 8.0
+    - dead_fire_coral_block-value: 8.0
+    - dead_horn_coral_block-value: 8.0
+    - diorite_stairs-value: 4.0
+    - deepslate_brick_stairs-value: 4.0
+    - deepslate_tile_stairs-value: 4.0
+    - diorite_slab-value: 4.0
+    - deepslate_brick_slab-value: 4.0
+    - deepslate_tile_slab-value: 4.0
+    - dispenser-value: 50.0
+    - dropper-value: 6.0
+    - daylight_detector-value: 14.0
+    - dark_oak_button-value: 4.0
+    - dark_oak_pressure_plate-value: 4.0
+    - dark_oak_door-value: 8.0
+    - dark_oak_trapdoor-value: 4.0
+    - dark_oak_fence_gate-value: 4.0
+    - detector_rail-value: 25.0
+    - dark_oak_sign-value: 9.0
+    - dark_oak_hanging_sign-value: 9.0
+    - dried_kelp_block-value: 150.0
+    - dragon_head-value: 1000.0
+    - exposed_copper-value: 5.0
+    - exposed_chiseled_copper-value: 4.0
+    - exposed_cut_copper-value: 5.0
+    - exposed_cut_copper_stairs-value: 7.0
+    - exposed_cut_copper_slab-value: 5.0
+    - end_rod-value: 6.0
+    - enchanting_table-value: 500.0
+    - end_stone-value: 1.0
+    - end_stone_bricks-value: 1.0
+    - ender_chest-value: 150.0
+    - end_stone_brick_stairs-value: 1.0
+    - end_stone_brick_slab-value: 1.0
+    - exposed_copper_door-value: 4.0
+    - exposed_copper_trapdoor-value: 4.0
+    - exposed_copper_grate-value: 4.0
+    - exposed_copper_bulb-value: 4.0
+    - furnace-value: 16.0
+    - fire_coral_block-value: 8.0
+    - flower_pot-value: 2.0
+    - fletching_table-value: 10.0
+    - granite-value: 4.0
+    - gravel-value: 3.0
+    - glass-value: 20.0
+    - gray_wool-value: 4.0
+    - green_wool-value: 4.0
+    - glowstone-value: 3.0
+    - glass_pane-value: 3.0
+    - glow_lichen-value: 4.0
+    - gray_terracotta-value: 6.0
+    - lime_terracotta-value: 6.0
+    - gray_carpet-value: 2.0
+    - green_carpet-value: 2.0
+    - gray_stained_glass-value: 6.0
+    - green_stained_glass-value: 6.0
+    - gray_stained_glass_pane-value: 3.0
+    - green_stained_glass_pane-value: 3.0
+    - gray_shulker_box-value: 75.0
+    - green_shulker_box-value: 75.0
+    - gray_glazed_terracotta-value: 3.0
+    - green_glazed_terracotta-value: 3.0
+    - gray_concrete-value: 8.0
+    - green_concrete-value: 8.0
+    - gray_concrete_powder-value: 4.0
+    - green_concrete_powder-value: 4.0
+    - granite_stairs-value: 4.0
+    - granite_slab-value: 4.0
+    - gray_bed-value: 45.0
+    - green_bed-value: 45.0
+    - gray_banner-value: 50.0
+    - green_banner-value: 50.0
+    - grindstone-value: 10.0
+    - gilded_blackstone-value: 4.0
+    - gray_candle-value: 18.0
+    - green_candle-value: 18.0
+    - heavy_core-value: 1000.0
+    - hay_block-value: 170.0
+    - horn_coral_block-value: 8.0
+    - honey_block-value: 20.0
+    - hopper-value: 60.0
+    - heavy_weighted_pressure_plate-value: 5.0
+    - ice-value: 6.0
+    - iron_bars-value: 1.0
+    - iron_door-value: 10.0
+    - iron_trapdoor-value: 4.0
+    - jungle_planks-value: 4.0
+    - jungle_slab-value: 4.0
+    - jukebox-value: 100.0
+    - jungle_fence-value: 4.0
+    - jack_o_lantern-value: 30.0
+    - jungle_stairs-value: 4.0
+    - jungle_button-value: 4.0
+    - jungle_pressure_plate-value: 4.0
+    - jungle_door-value: 8.0
+    - jungle_trapdoor-value: 4.0
+    - jungle_fence_gate-value: 4.0
+    - jungle_sign-value: 9.0
+    - jungle_hanging_sign-value: 9.0
+    - light_blue_wool-value: 4.0
+    - lime_wool-value: 4.0
+    - light_gray_wool-value: 4.0
+    - ladder-value: 5.0
+    - light_blue_terracotta-value: 6.0
+    - light_gray_terracotta-value: 6.0
+    - light_blue_carpet-value: 2.0
+    - lime_carpet-value: 2.0
+    - light_gray_carpet-value: 2.0
+    - light_blue_stained_glass-value: 6.0
+    - lime_stained_glass-value: 6.0
+    - light_gray_stained_glass-value: 6.0
+    - light_blue_stained_glass_pane-value: 3.0
+    - lime_stained_glass_pane-value: 3.0
+    - light_gray_stained_glass_pane-value: 3.0
+    - light_blue_shulker_box-value: 75.0
+    - lime_shulker_box-value: 75.0
+    - light_gray_shulker_box-value: 75.0
+    - light_blue_glazed_terracotta-value: 3.0
+    - lime_glazed_terracotta-value: 1.0
+    - light_gray_glazed_terracotta-value: 4.0
+    - light_blue_concrete-value: 8.0
+    - lime_concrete-value: 8.0
+    - light_gray_concrete-value: 8.0
+    - light_blue_concrete_powder-value: 4.0
+    - lime_concrete_powder-value: 4.0
+    - light_gray_concrete_powder-value: 4.0
+    - lectern-value: 10.0
+    - lever-value: 4.0
+    - lightning_rod-value: 50.0
+    - light_weighted_pressure_plate-value: 10.0
+    - light_blue_bed-value: 45.0
+    - lime_bed-value: 45.0
+    - light_gray_bed-value: 45.0
+    - light_blue_banner-value: 50.0
+    - lime_banner-value: 50.0
+    - light_gray_banner-value: 50.0
+    - loom-value: 20.0
+    - lantern-value: 4.0
+    - lodestone-value: 100.0
+    - light_blue_candle-value: 18.0
+    - lime_candle-value: 18.0
+    - light_gray_candle-value: 18.0
+    - mud-value: 8.0
+    - mangrove_planks-value: 4.0
+    - mangrove_log-value: 4.0
+    - mangrove_roots-value: 4.0
+    - muddy_mangrove_roots-value: 4.0
+    - mangrove_wood-value: 4.0
+    - magenta_wool-value: 4.0
+    - moss_carpet-value: 1.0
+    - moss_block-value: 2.0
+    - mangrove_slab-value: 4.0
+    - mud_brick_slab-value: 4.0
+    - mossy_cobblestone-value: 8.0
+    - mangrove_fence-value: 4.0
+    - mossy_stone_bricks-value: 4.0
+    - mud_bricks-value: 4.0
+    - mushroom_stem-value: 2.0
+    - mud_brick_stairs-value: 4.0
+    - mycelium-value: 5.0
+    - mangrove_stairs-value: 4.0
+    - mossy_cobblestone_wall-value: 8.0
+
+

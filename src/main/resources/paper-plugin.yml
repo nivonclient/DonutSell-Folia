@@ -1,0 +1,43 @@
+name: DonutSell
+version: '1.0'
+main: mrduck.donutSell.DonutSell
+api-version: '1.21'
+load: STARTUP
+authors: [ mrduck ]
+description: this is description
+folia-supported: true
+
+dependencies:
+  server:
+    packetevents:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    Vault:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      join-classpath: true
+
+commands:
+  sell:
+    usage: /<command>
+    permission: sell.use
+  worth:
+    usage: /worth [item] [amount]
+    permission: sell.use
+  sellhistory:
+    usage: /sellhistory
+    permission: sell.use
+  donutsell:
+    usage: /donutsell givesellwand <player>
+    permission: sell.admin
+  sellmulti:
+    usage: /sellmulti
+    permission: sell.use
+  toggleworth:
+    usage: /toggleworth
+    permission: sell.use
